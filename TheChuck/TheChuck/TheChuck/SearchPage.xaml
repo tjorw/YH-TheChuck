@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheChuck.SearchPage"
+             ControlTemplate="{StaticResource PageTemplate}"
+             Title="{Binding Title}"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="JokeListItem">
+                <Setter Property="Padding" Value="10,10,10,10"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>    
+    <StackLayout>
+        <SearchBar x:Name="SearchText" SearchCommand="{Binding SearchCommand}" Text="{Binding Query}" Placeholder="Search..."></SearchBar>
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Jokes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding value}" Style="{StaticResource JokeListItem}"></Label>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
+        <Button Text="SEARCH" Command="{Binding SearchCommand}"></Button>
+    </StackLayout>
+    
+</ContentPage>

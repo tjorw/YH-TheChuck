@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheChuck.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="PageTemplate">
+                <StackLayout>
+                    <ContentPresenter VerticalOptions="FillAndExpand"></ContentPresenter>
+                    <Label Text="The Chuck 2020" HorizontalTextAlignment="End"></Label>
+                </StackLayout>
+            </ControlTemplate>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+
+            <Style TargetType="SearchBar">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="PlaceholderColor" Value="Gray"></Setter>
+                <Setter Property="CancelButtonColor" Value="Gray"></Setter>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ButtonStyle">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="Padding" Value="10"></Setter>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="Black"></Setter>
+            </Style>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BackgroundColor" Value="Black"></Setter>
+                <Setter Property="BarBackgroundColor" Value="Black"></Setter>
+                <Setter Property="BarTextColor" Value="Yellow"></Setter>
+                <Setter Property="BarTextColor" Value="Yellow"></Setter>
+            </Style>
+
+            <Style TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="Black"></Setter>
+            </Style>            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
